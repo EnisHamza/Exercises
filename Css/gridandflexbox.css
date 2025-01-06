@@ -48,3 +48,20 @@ p {
 .box > img {
   width: 100%;
 }
+
+a {
+  border: 2px solid white;
+  border-radius: 2rem;
+  padding: 7px;
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  background-color: #9494b8;
+  color: #ff0066;
+}
+
+a:active {
+  background-color: red;
+}
