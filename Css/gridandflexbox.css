@@ -65,3 +65,10 @@ a:hover {
 a:active {
   background-color: red;
 }
+
+footer {
+  background-color: #9494b8;
+  padding: 20px;
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
