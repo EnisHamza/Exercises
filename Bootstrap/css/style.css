@@ -1,0 +1,21 @@
+#header {
+  background: url(../images/frame.png) no-repeat;
+  background-size: cover;
+  height: 41rem;
+}
+
+h1 {
+  margin-top: 45rem;
+}
+
+.navbar {
+  box-shadow: 10px 10px 5px lightblue;
+}
+
+.nav-link:hover {
+  color: #aed8e6 !important;
+}
+
+li {
+  margin-right: 10px;
+}
