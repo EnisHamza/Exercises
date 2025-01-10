@@ -48,3 +48,16 @@ li {
   background-position: center;
   background-size: cover;
 }
+
+.products {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+#carouselExampleCaptions {
+  background-color: rgba(26, 0, 26, 0.1);
+  background-size: cover;
+}
+
+h5 {
+  font-family: fantasy;
+}
