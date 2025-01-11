@@ -33,3 +33,14 @@ console.log(assign);
 console.log(3 == "3");
 console.log(3 === "3");
 console.log(3 !== "6");
+
+if (6 !== "6") {
+  console.log("Kosova");
+}
+
+let today = "Friday";
+if (today == "Friday") {
+  console.log("Nope, Today is Saturday");
+} else {
+  console.log("Yaaay, Its true today is Saturday");
+}
