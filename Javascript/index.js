@@ -1,5 +1,6 @@
 console.log("Hello World");
 
+//Data types
 const name = "Enis Hamza";
 const number = 23;
 const gender = "male";
@@ -11,3 +12,24 @@ console.log(full);
 console.log(gender);
 console.log(male);
 console.log(date);
+
+//Operators
+const result = 5 + 3;
+console.log(result);
+const multiply = 5 + (3 * 2) / 3;
+console.log(multiply);
+
+const check = 6 < 3;
+console.log(check);
+
+var assign = 6;
+assign++;
+assign += 5;
+console.log(assign);
+assign--;
+assign--;
+console.log(assign);
+
+console.log(3 == "3");
+console.log(3 === "3");
+console.log(3 !== "6");
