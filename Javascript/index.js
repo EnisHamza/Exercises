@@ -55,3 +55,14 @@ let age = null;
 if (age) {
   console.log("Lets go");
 }
+
+//Logical operators
+var shuma = 94;
+var medicalTest = false;
+var physicalTest = true;
+
+const Pass = shuma > 90 && medicalTest && physicalTest;
+console.log(Pass);
+
+const Passed = shuma > 90 || (medicalTest && physicalTest);
+console.log(Passed);
