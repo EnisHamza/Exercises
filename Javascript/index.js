@@ -66,3 +66,33 @@ console.log(Pass);
 
 const Passed = shuma > 90 || (medicalTest && physicalTest);
 console.log(Passed);
+
+var para = 0;
+var kePara = "Hajde";
+var skePara = "Mos hajde";
+
+const Varet = para ? kePara : skePara;
+console.log(Varet);
+
+//Control flow
+
+const temp = 24;
+if (temp > 30) {
+  console.log("Dont forget the factor 50!");
+} else if (temp < 10) {
+  console.log("Wear a jacket");
+} else {
+  console.log("Its a Tshirt day");
+}
+
+const milioner = 1000000;
+const miliarder = 1000000000;
+const leke = 50;
+
+if (leke > miliarder) {
+  console.log("Ti je Miliarder!");
+} else if (leke > milioner && leke < miliader) {
+  console.log("Ti je milioner");
+} else {
+  console.log("Sorry to say. You are fukara");
+}
