@@ -75,7 +75,7 @@ const Varet = para ? kePara : skePara;
 console.log(Varet);
 
 //Control flow
-
+//If-Else
 const temp = 24;
 if (temp > 30) {
   console.log("Dont forget the factor 50!");
@@ -95,4 +95,30 @@ if (leke > miliarder) {
   console.log("Ti je milioner");
 } else {
   console.log("Sorry to say. You are fukara");
+}
+
+//Loops
+for (var i = 0; i < 100; i++) {
+  console.log("I wont cheat in exams", i);
+}
+
+var count = 50;
+var hera = 0;
+do {
+  var times = hera + 1;
+  console.log("This is repeated for " + times + " " + "times", count);
+  count++;
+  hera++;
+} while (count < 100);
+
+for (let i = 1; i < 100; i++) {
+  if (i % 3 && i % 5) {
+    console.log("Fizz Buzz");
+  } else if (i % 3) {
+    console.log("Fizz");
+  } else if (i % 5) {
+    console.log("Buzz");
+  } else {
+    console.log(i);
+  }
 }
