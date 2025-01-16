@@ -32,3 +32,24 @@ function printPhrase(phrase, amount) {
   }
 }
 printPhrase("I will go to FSK", 5);
+
+//function expression
+const getSeconds = function (minutes) {
+  return minutes * 60;
+};
+console.log(getSeconds);
+
+const getSecondsInHours = function (hours) {
+  return hours * 60 * 60;
+};
+console.log(getSecondsInHours(2));
+
+//Arrow functions
+const getSekondat = (minutes) => {
+  return minutes * 60;
+};
+console.log(getSekondat(2));
+
+let minutat = 60;
+const getSekondatNeOre = (hours) => hours * minutat * 60;
+console.log(getSekondatNeOre(4));
