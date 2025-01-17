@@ -16,6 +16,14 @@ function FullName(firstName, lastName) {
 }
 console.log(FullName("Enis", "Hamza"));
 
+function drinkAlcohol(age) {
+  if (age < 18) {
+    return "You cant drink alcohol";
+  }
+  return "You can drink alcohol";
+}
+console.log(drinkAlcohol(16));
+
 function getBirthYear(age, year) {
   return year - age;
 }
@@ -37,12 +45,21 @@ printPhrase("I will go to FSK", 5);
 const getSeconds = function (minutes) {
   return minutes * 60;
 };
-console.log(getSeconds);
+console.log(getSeconds(2));
 
 const getSecondsInHours = function (hours) {
   return hours * 60 * 60;
 };
 console.log(getSecondsInHours(2));
+
+const shuma = function (numri) {
+  var rezultati = 0;
+  for (var i = 1; i <= numri; i++) {
+    rezultati = rezultati + i;
+  }
+  return rezultati;
+};
+console.log(shuma(4));
 
 //Arrow functions
 const getSekondat = (minutes) => {
