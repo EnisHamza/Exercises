@@ -46,3 +46,11 @@ function isFriday() {
   return "You gotta WORK";
 }
 console.log(isFriday());
+
+document.addEventListener("click", function alertMe() {
+  alert("You clicked this site");
+});
+
+document.addEventListener("mouseover", function mouseOver() {
+  alert("You have the mouse over the site");
+});
