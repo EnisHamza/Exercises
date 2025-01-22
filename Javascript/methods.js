@@ -54,3 +54,7 @@ document.addEventListener("click", function alertMe() {
 document.addEventListener("mouseover", function mouseOver() {
   alert("You have the mouse over the site");
 });
+
+document.addEventListener("mouseout", function mouseLeave() {
+  alert("You have the mouse out");
+});
