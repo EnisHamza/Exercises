@@ -47,6 +47,14 @@ function isFriday() {
 }
 console.log(isFriday());
 
+function isSaturday(date) {
+  if (date === "Saturday") {
+    return "Finally, Its Saturday";
+  }
+  return "Its a workday";
+}
+console.log(isSaturday("Saturday"));
+
 document.addEventListener("click", function alertMe() {
   alert("You clicked this site");
 });
@@ -55,6 +63,6 @@ document.addEventListener("mouseover", function mouseOver() {
   alert("You have the mouse over the site");
 });
 
-document.addEventListener("mouseout", function mouseLeave() {
+document.addEventListener("mouseout", function mouseOut() {
   alert("You have the mouse out");
 });
