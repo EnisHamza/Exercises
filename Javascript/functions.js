@@ -70,3 +70,20 @@ console.log(getSekondat(2));
 let minutat = 60;
 const getSekondatNeOre = (hours) => hours * minutat * 60;
 console.log(getSekondatNeOre(4));
+
+//Callback functions
+let data = new Date();
+const alertMe = function () {
+  alert(data);
+};
+document.addEventListener("click", alertMe);
+
+const goodJob = function () {
+  alert("Well Done");
+};
+document.addEventListener("mouseover", goodJob);
+
+const badJob = function (message) {
+  alert(message);
+};
+document.addEventListener("mouseout", () => badJob("Bad Job"));
