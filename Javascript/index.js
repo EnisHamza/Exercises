@@ -31,7 +31,7 @@ assign--;
 console.log(assign);
 
 console.log(3 == "3");
-console.log(4 === "3");
+console.log(3 === "3");
 console.log(3 !== "6");
 
 //If-else Statements

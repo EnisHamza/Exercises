@@ -59,10 +59,28 @@ document.addEventListener("click", function alertMe() {
   alert("You clicked this site");
 });
 
-document.addEventListener("mouseover", function mouseOver() {
+{
+  /*document.addEventListener("mouseover", function mouseOver() {
   alert("You have the mouse over the site");
 });
 
 document.addEventListener("mouseout", function mouseOut() {
   alert("You have the mouse out");
-});
+});*/
+}
+
+document.querySelector(".submit-button");
+console.log(document.querySelector(".submit-button"));
+
+document.querySelector("#search-button");
+console.log(document.querySelector("#search-button"));
+
+//When there are two or more div, querySelector takes only the first one
+document.querySelector("div");
+console.log(document.querySelector("div"));
+//Now it takes all the divs
+document.querySelectorAll("div");
+console.log(document.querySelectorAll("div"));
+
+const secondDiv = document.querySelector(".second");
+console.log(secondDiv.innerText);
