@@ -84,3 +84,8 @@ console.log(document.querySelectorAll("div"));
 
 const secondDiv = document.querySelector(".second");
 console.log(secondDiv.innerText);
+
+console.log(document.getElementById("submit-btn"));
+const teksti = document.getElementsByClassName("text");
+console.log(teksti);
+console.log(document.getElementsByTagName("input"));
