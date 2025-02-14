@@ -1,0 +1,58 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(1, 134, 134);
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+}
+
+.widget-container {
+  width: 50rem;
+  height: 40rem;
+  background-color: white;
+  border-radius: 1rem;
+  text-align: center;
+  color: slategrey;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.face {
+  width: 15rem;
+  height: 15rem;
+  background-color: rgb(251, 214, 31);
+  border-radius: 20rem;
+}
+
+.eye-container {
+  position: relative;
+  top: 4rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.eye {
+  width: 2.8rem;
+  height: 2.8rem;
+  background-color: rgb(32, 24, 78);
+  border-radius: 10rem;
+}
+
+.mouth-container {
+  position: relative;
+  left: 3.5rem;
+  top: 6rem;
+}
+
+.happy-mouth {
+  width: 8rem;
+  height: 4rem;
+  background-color: rgb(32, 24, 78);
+  border-radius: 10px 10px 150px 150px;
+}
