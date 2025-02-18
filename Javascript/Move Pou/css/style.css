@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(191, 122, 233);
+}
+
+h2 {
+  color: white;
+  text-align: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.bob {
+  position: absolute;
+  bottom: 10rem;
+  left: 10rem;
+  width: 20rem;
+  height: 20rem;
+  border-radius: 10rem;
+  background-color: rgb(238, 205, 170);
+}
+
+.eye-container {
+  position: relative;
+  top: 4rem;
+  left: 4.5rem;
+  display: flex;
+}
+
+.eye {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 3rem;
+  background-color: white;
+  margin: 3px;
+}
+
+.eye::after {
+  position: relative;
+  left: 2rem;
+  top: 1rem;
+  content: "";
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  background-color: black;
+  border-radius: 1rem;
+}
