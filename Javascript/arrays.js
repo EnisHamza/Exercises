@@ -6,6 +6,7 @@ console.log(boys);
 const mix = Array("Albin", "Saranda", "Glauk", "Blerta");
 console.log(mix);
 
+//length
 //const number = [1, 2, 3, 4].length;
 const number = [1, 2, 3, 4];
 const takelength = number.length;
@@ -17,3 +18,21 @@ function countSheeps() {
   console.log(sheep);
 }
 document.addEventListener("click", countSheeps);
+
+//shift()
+const shteti = ["Franca", "Gjermania", "Britania", "Amerika", "Kosova"];
+const solo = shteti.shift();
+shteti.shift();
+console.log(shteti);
+console.log(solo);
+
+const fridge = document.querySelector(".fridge");
+const topShelf = document.querySelector("#top-shelf");
+const foodItems = ["🍇", "🍌", "🍩", "🍔", "🍕", "🍏", "🌶️", "🍡"];
+
+topShelf.innerHTML = foodItems;
+function throwAway() {
+  foodItems.shift();
+  topShelf.innerHTML = foodItems;
+}
+document.addEventListener("click", throwAway);

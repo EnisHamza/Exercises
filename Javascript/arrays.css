@@ -1,0 +1,22 @@
+body {
+  background-color: rgb(24, 110, 147);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.fridge {
+  background-color: rgb(249, 233, 212);
+  height: 280px;
+  width: 200px;
+  border-radius: 10px;
+  outline: 10px solid rgb(164, 164, 164);
+}
+
+.shelf {
+  height: 45px;
+  border-bottom: 5px solid rgb(118, 117, 117);
+  display: flex;
+  align-items: flex-end;
+}
