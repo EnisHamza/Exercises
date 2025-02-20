@@ -95,3 +95,29 @@ const smartPhone = ["Iphone", "Samsung", "Nokia", "Huawei"];
 const favorite = smartPhone.slice(0, 1);
 console.log(favorite);
 console.log(smartPhone);
+
+//Array Exercises
+//1. Join these two arrays together and then sort the words by longest to shortest
+const primaryColors = ["red", "blue", "yellow"];
+const pastelColors = ["lilac", "beige", "azure"];
+const colors = primaryColors.concat(pastelColors);
+colors.sort((a, b) => b.length - a.length);
+console.log(colors);
+
+//2. Put the numbers in order and then add the missing ones
+const count = [1, 0, 8, 10, 7, 3, 9, 2];
+const inOrder = count.sort((a, b) => a - b);
+inOrder.splice(4, 0, 4, 5, 6);
+console.log(inOrder);
+
+//3. Make a sentence out of this array without last word
+const words = ["The", "cat", "jumped", "over", "the", "moon", "if"];
+words.pop();
+const sentence = words.join(" ");
+console.log(sentence);
+
+//4. Sort these items in order and remove the odd one out
+const years = ["bed", 1990, 1734, 2022, 1634];
+years.shift();
+years.sort((a, b) => a - b);
+console.log(years);
