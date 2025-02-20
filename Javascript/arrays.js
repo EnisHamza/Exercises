@@ -76,3 +76,22 @@ console.log(numrat);
 const toDo = ["clean", "sleep", "fix"];
 toDo.push("spare", "drink");
 console.log(toDo);
+
+//splice()
+const months = ["Jan", "Mar", "Apr", "May"];
+months.splice(1, 1, "Feb");
+console.log(months);
+
+const viti = [2002, 2003, 2010, 2013, 2014, 2018, 2023];
+viti.splice(2, 2, "2011");
+console.log(viti);
+
+//slice()
+const kitKat = ["wasabi", "peanut", "strawberry", "matcha"];
+const myFavorite = kitKat.slice(1, 3);
+console.log(myFavorite);
+
+const smartPhone = ["Iphone", "Samsung", "Nokia", "Huawei"];
+const favorite = smartPhone.slice(0, 1);
+console.log(favorite);
+console.log(smartPhone);
