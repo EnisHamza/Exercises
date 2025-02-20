@@ -35,4 +35,24 @@ function throwAway() {
   foodItems.shift();
   topShelf.innerHTML = foodItems;
 }
+function addFood() {
+  foodItems.unshift("🍇", "🍌", "🍩", "🍔", "🍕", "🍏", "🌶️", "🍡");
+  topShelf.innerHTML = foodItems;
+}
 document.addEventListener("click", throwAway);
+document.addEventListener("scroll", addFood);
+
+//unshift()
+const qyteti = ["Mitrovica", "Prishtina"];
+qyteti.unshift("Gjilani");
+console.log(qyteti);
+
+//concat()
+const perime = ["Karrota", "Kastravec", "Patlixhan"];
+const fruta = ["Molla", "Rrush", "Banane"];
+const miks = perime.concat(fruta);
+console.log(miks);
+
+//join
+const filma = ["Shok", "Fc Latta", "Shpk Nazi"];
+console.log(filma.join(" and "));
