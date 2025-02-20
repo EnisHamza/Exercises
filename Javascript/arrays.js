@@ -121,3 +121,12 @@ const years = ["bed", 1990, 1734, 2022, 1634];
 years.shift();
 years.sort((a, b) => a - b);
 console.log(years);
+
+//forEach()
+const gameTotals = [23, 16, 34, 232];
+//gameTotals.forEach((gameTotal) => console.log(gameTotal + 10));
+gameTotals.forEach((qyshDush, index) => {
+  const playerNumber = index + 1;
+  const newTotal = qyshDush + 10;
+  console.log("Player " + playerNumber + "'s total is" + newTotal);
+});
