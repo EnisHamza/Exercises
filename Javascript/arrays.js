@@ -56,3 +56,23 @@ console.log(miks);
 //join
 const filma = ["Shok", "Fc Latta", "Shpk Nazi"];
 console.log(filma.join(" and "));
+
+//sort
+const emri = ["Enis", "Beqir", "Alvin", "Xeni"];
+//emri.sort().reverse();
+emri.sort((a, b) => a.length - b.length);
+console.log(emri);
+
+const numri = [97, 45, 12, 96];
+numri.sort((a, b) => a - b);
+console.log(numri);
+
+//pop()
+const numrat = [1, 2, 4, 6, 8, 9];
+numrat.pop();
+console.log(numrat);
+
+//push()
+const toDo = ["clean", "sleep", "fix"];
+toDo.push("spare", "drink");
+console.log(toDo);
