@@ -130,3 +130,18 @@ gameTotals.forEach((qyshDush, index) => {
   const newTotal = qyshDush + 10;
   console.log("Player " + playerNumber + "'s total is" + newTotal);
 });
+
+//some()
+const city = ["Mitrovica", "Prishtina", "Gjakova", "Peja"];
+//const check = city.some((_city) => _city === "Rahovec"); returns false
+const check = city.some((_city) => _city === "Mitrovica"); //returns true
+console.log(check);
+
+//map()
+const house = ["kitchen", "kitchen", "kitchen"];
+const housee = house.map((home) => (home = "kitchen with living room"));
+console.log(housee);
+
+const totalScore = [34, 42, 58, 71, 95];
+const addScore = totalScore.map((addition) => addition + 10);
+console.log(addScore);

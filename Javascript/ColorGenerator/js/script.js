@@ -1,4 +1,4 @@
-const colorsContainer = document.querySelector(".colors-container");
+/*const colorsContainer = document.querySelector(".colors-container");
 const buttonElement = document.querySelector("#color-button");
 
 let colorBlocks = ["", "", "", ""];
@@ -32,4 +32,38 @@ function color() {
 }
 
 buttonElement.addEventListener("click", color);
-document.addEventListener("keydown", color);
+document.addEventListener("keydown", color);*/
+
+const colorContainer = document.querySelector(".colors-container");
+const buttonElement = document.querySelector("#color-button");
+
+let blloqet = ["", "", ""];
+
+function getRandomNumber() {
+  return Math.floor(Math.random() * 255);
+}
+
+function ngjyrat() {
+  colorContainer.innerHTML = "";
+  const commonColor = getRandomNumber();
+
+  blloqet.forEach((blloku, index) => {
+    blloqet[index] =
+      "rgb(" +
+      commonColor +
+      "," +
+      getRandomNumber() +
+      "," +
+      getRandomNumber() +
+      ")";
+  });
+
+  blloqet.forEach((_blloku) => {
+    const divElement = document.createElement("div");
+    divElement.style.backgroundColor = _blloku;
+    divElement.textContent = _blloku;
+    colorContainer.append(divElement);
+  });
+}
+buttonElement.addEventListener("click", ngjyrat);
+document.addEventListener("keydown", ngjyrat);
