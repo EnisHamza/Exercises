@@ -174,3 +174,30 @@ console.log(partyAge);
 let fjalia = "I like to sleep";
 let fjala = fjalia.split(" ");
 console.log(fjala);
+
+//More array exercises
+//1. Write function that will change the temperatures from Celcius to Fahrenheit
+function getCelcius(numrat) {
+  return numrat.map((numri) => (numri * 9) / 5 + 32);
+}
+console.log(getCelcius([100, 5, 25, 10]));
+
+//2. Write a function that will return the total number of characters in an array of strings
+function getTotal(words) {
+  return words.join("").length;
+}
+console.log(getTotal(["Mirror", "Balloon", "0x"]));
+
+//3. Write a function that will check an array for false values
+function checkForFalsey(values) {
+  return values.some((value) => value == false);
+}
+console.log(checkForFalsey([null, 0, [], -3]));
+
+//4. Write a function that will tell you how many vowels are there in a sentence
+const vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"];
+function vowelCount(sentence) {
+  const array = sentence.split("");
+  return array.filter((letter) => vowels.includes(letter)).length;
+}
+console.log(vowelCount("I am a little sausage"));
