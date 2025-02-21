@@ -145,3 +145,32 @@ console.log(housee);
 const totalScore = [34, 42, 58, 71, 95];
 const addScore = totalScore.map((addition) => addition + 10);
 console.log(addScore);
+
+//filter()
+const password = ["Korona", "Password", "CatchTiger", "Programming"];
+const filterPassword = password.filter((pass) => pass.length > 8);
+console.log(filterPassword);
+
+const vlerat = [24, 43, 56, 65, 72];
+const pjesetimi = vlerat.filter((vlera) => vlera % 8 === 0);
+console.log(pjesetimi);
+
+//includes()
+const flock = ["sheep", "sheep", "sheep", "black sheep"];
+const includesFlock = flock.includes("black sheep");
+console.log(includesFlock);
+
+//reduce
+const raisedByDay = [4, 12, 2, 15];
+const totalRaised = raisedByDay.reduce((a, b) => a + b);
+console.log(totalRaised);
+
+//every
+const peopleAge = [23, 34, 27, 16];
+const partyAge = peopleAge.every((people) => people >= 18);
+console.log(partyAge);
+
+//split()
+let fjalia = "I like to sleep";
+let fjala = fjalia.split(" ");
+console.log(fjala);
