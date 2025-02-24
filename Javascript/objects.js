@@ -54,3 +54,26 @@ console.log(restaurant[1].address.first_line);
 
 //6. Get Ujevara second contact number
 console.log(restaurant[1].address.contact[1]);
+
+//Timing Events
+//setTimeout() && setInterval()
+function alertMe() {
+  console.log("beep beep");
+}
+//setTimeout(alerMe, 5000);
+//setInterval(alertMe, 1000);
+
+let timerId;
+timerId = setInterval(alertMe, 1000);
+function stopTimer() {
+  clearInterval(timerId);
+}
+document.addEventListener("click", stopTimer);
+
+//setTimeout Exercise
+const titleElement = document.querySelector("h1");
+function showTitle() {
+  titleElement.innerText = "Boo";
+}
+setTimeout(showTitle, 1000);
+//document.addEventListener("click", () => setTimeout(showTitle, 1000));
