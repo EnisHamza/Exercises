@@ -22,3 +22,33 @@ function handleClick(e) {
 }
 
 submitButton.addEventListener("click", handleClick);
+
+//Switch case
+let points = 4;
+let days;
+switch (points) {
+  case 1:
+    days = "Monday";
+    break;
+  case 2:
+    days = "Tuesday";
+    break;
+  case 3:
+    days = "Wednesday;";
+    break;
+  case 4:
+    days = "Thursday";
+    break;
+  case 5:
+    days = "Friday";
+    break;
+  case 6:
+    days = "Saturday";
+    break;
+  case 7:
+    days = "Sunday";
+    break;
+  default:
+    days = "Invalid Day";
+}
+console.log(`Your Day is: ${days}`);
