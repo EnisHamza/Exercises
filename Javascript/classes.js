@@ -52,3 +52,14 @@ switch (points) {
     days = "Invalid Day";
 }
 console.log(`Your Day is: ${days}`);
+
+//Set and get attribute
+const imageContainer = document.querySelector("#image");
+const imageElement = document.createElement("img");
+
+imageElement.setAttribute(
+  "src",
+  "https://www.freepik.com/free-vector/gradient-christmas-tinsel-background_19963269.htm#fromView=keyword&page=1&position=0&uuid=1a38099e-fb26-4b21-ba4f-3e22b87cc6cb&query=Christmas"
+);
+imageElement.setAttribute("alt", "Christmas at night");
+imageContainer.append(imageElement);
