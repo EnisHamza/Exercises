@@ -63,3 +63,8 @@ imageElement.setAttribute(
 );
 imageElement.setAttribute("alt", "Christmas at night");
 imageContainer.append(imageElement);
+
+//Infinite Loop
+/*for (let i = 0; i < 100; ) {
+  console.log(i);
+}*/
