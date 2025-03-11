@@ -141,3 +141,53 @@ function findMax(a, b, c) {
   return Math.max(a, b, c);
 }
 console.log(findMax(1, 2, 4));
+
+//Create an arrow function named calculateBMI that takes two parameters,
+//weight (in kilograms) and height (in meters), and returns the Body Mass Index (BMI).
+//The formula for BMI is: weight / (height * height).
+let calculateBMI = (weight, height) => {
+  return weight / (height * height);
+};
+console.log(calculateBMI(70, 1.75));
+
+//Write a function named isValid that gets two string arguments, username and password.
+//The function will return True if the username and password are valid in the system, otherwise False.
+//Our system contains only two valid usernames - "admin" and "user".
+//The valid password for username "user" is "qweasd".
+//For username "admin" any password is valid!
+let isValid = (username, password) => {
+  if (username == "admin" || username == "user") {
+    if (username == "user" && password == "qweasd") {
+      return true;
+    } else if (username == "admin") {
+      return true;
+    } else {
+      return false;
+    }
+  } else {
+    return false;
+  }
+};
+console.log(isValid("user", "qweasd"));
+
+//Create a function expression named calculateVolume that takes three arguments, length, width, and height,
+// and returns the volume of a rectangular prism. The function should be assigned to a variable named calculateVolume.
+let calculateVolume = function (length, width, height) {
+  return length * width * height;
+};
+console.log(calculateVolume(3, 4, 5));
+
+//Create an arrow function named sumOfEvens that:
+//Takes one parameter: n (a positive integer).
+//Calculates the sum of all even numbers from 1 to n (inclusive).
+//Returns the result.
+let sumOfEvens = (n) => {
+  let result = 0;
+  for (let i = 1; i <= n; i++) {
+    if (i % 2 === 0) {
+      result = i + result;
+    }
+  }
+  return result;
+};
+console.log(sumOfEvens(22));
