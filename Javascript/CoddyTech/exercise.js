@@ -191,3 +191,58 @@ let sumOfEvens = (n) => {
   return result;
 };
 console.log(sumOfEvens(22));
+
+//FizzBuzz with a Twist
+function fizzbuzz(num) {
+  if (num % 3 == 0 && num % 7 == 0) {
+    return "FizzBuzz";
+  } else if (num % 3 == 0) {
+    return "Fizz";
+  } else if (num % 7 == 0) {
+    return "Buzz";
+  } else if (num.toString().includes("3")) {
+    return "Almost Fizz";
+  } else {
+    return (num = String(num));
+  }
+}
+
+function fizzbuzzLoop(num) {
+  for (let i = 1; i <= num; i++) {
+    console.log(fizzbuzz(i));
+  }
+}
+fizzbuzzLoop(24);
+
+//Array
+let array = ["red", "blue", "green", "yellow", "purple"];
+console.log(array[array.length - 2]);
+
+//Create a function named changeElement that receives 3 arguments:
+//First argument is an array.
+//Second argument is an index.
+//Third argument is a new element
+//The function will return the modified array by changing the element in an index
+//that is stored in the second argument with the value in the third argument.
+function changeElement(arr, index, newElement) {
+  arr[index] = newElement;
+  return arr;
+}
+console.log(changeElement([8, 8, 8, 8], 2, 7));
+
+//Create a function named swapEnds that receives one argument:An array.
+//The function swaps the first and the last elements of the array and returns the modified array.
+//For example with the following arguments: swapEnds([1, 2, 3, 4]) the function will return [4, 2, 3, 1]
+function swapEnds(array) {
+  let firstElement = array.shift();
+  let lastElement = array.pop();
+  array.unshift(lastElement);
+  array.push(firstElement);
+  return array;
+}
+console.log(swapEnds([1, 2, 3, 4]));
+
+function firstAndLast(arr) {
+  return arr[0] + arr[arr.length - 1];
+}
+console.log(firstAndLast([1, 2, 3, 4, 17]));
