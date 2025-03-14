@@ -395,3 +395,65 @@ let lastColor = colors.pop();
 console.log(colors);
 console.log(removedColor);
 console.log(lastColor);
+
+//Create a program that receives an array as input (given) and prints the following sliced arrays:
+/*For odd-length arrays: take the middle item and one item on each side (3 items total)
+For even-length arrays: take the two middle items
+For this challenge, use Math.floor() because array slicing only works with whole numbers.*/
+function slicedArray(arr) {
+  let result;
+  let length = arr.length;
+  if (length % 2 == 1) {
+    const middle = Math.floor(length / 2);
+    result = arr.slice(middle - 1, middle + 2);
+  } else {
+    const middle = length / 2;
+    result = arr.slice(middle - 1, middle + 1);
+  }
+  return result;
+}
+console.log(slicedArray([1, 2, 3, 4, 5]));
+
+//You are given an array numbers = [1, 2, 3, 4, 5]. Perform the following steps and print the results directly:
+/*Use concat() to add [6, 7, 8] to the end of the array and print the result.
+Use join() to convert the result of concat() into a string separated by commas and print it.
+Use slice() to extract the first three elements from the original numbers array and print them.
+Use splice() to replace the second element of numbers with 99 and print the modified numbers array.*/
+// 1.
+let numrat = [1, 2, 3, 4, 5];
+let shtoNumrat = [6, 7, 8];
+let ktheArray = numrat.concat(shtoNumrat);
+console.log(ktheArray);
+
+//2.
+let convert = ktheArray.join(",");
+console.log(convert);
+
+//3.
+let extract = numrat.slice(0, 3);
+console.log(extract);
+
+//4.
+let replace = numrat.splice(1, 1, 99);
+console.log(numrat);
+
+//You are given an array numbers = [1, 2, 3, 4, 5]. Perform the following steps and print the results directly:
+/*Use map() to create a new array where each number is multiplied by 3, and print the result.
+Use filter() to create a new array that only includes numbers greater than 3, and print the result.*/
+function moreArrays() {
+  let array = [1, 2, 3, 4, 5];
+  let multiples = array.map((arr) => (arr *= 3));
+  console.log(multiples);
+
+  let greater = array.filter((arr) => arr > 3);
+  console.log(greater);
+}
+moreArrays();
+
+function firstArray() {
+  let arr1 = [1, 2, 3, 4];
+  let arr2 = [1, 3, 5, 7];
+  let result = arr1.filter((num) => !arr2.includes(num));
+  console.log(result);
+}
+firstArray();
