@@ -457,3 +457,86 @@ function firstArray() {
   console.log(result);
 }
 firstArray();
+
+// add a function named removeItem that gets a string (the item) and removes it from the list.
+/*In the end, the function will output:
+Milk removed from the grocery list.
+For the input "Milk".
+And if the item does not exist in the list:
+Milk is not in the grocery list.*/
+let list = [];
+function addItem(item) {
+  list.push(item);
+  console.log(item + " added to the grocery list.");
+}
+
+function removeItem(item) {
+  const index = list.indexOf(item);
+  if (index !== -1) {
+    list.splice(index, 1);
+    console.log(item + " removed from the grocery list.");
+  } else {
+    console.log(item + " is not in the grocery list");
+  }
+}
+
+//Now, add a function named viewList that gets no arguments and prints the grocery list.
+/*The function will output:
+Grocery List:
+1. Milk
+2. Eggs
+3. Butter
+For a list with the following items ["Milk", "Eggs", "Butter"].
+If the list is empty output:
+The grocery list is empty.*/
+
+function viewList() {
+  if (list.length < 1) {
+    console.log("The grocery list is empty");
+  } else {
+    console.log("Grocery List:");
+    for (let i = 0; i < list.length; i++) {
+      console.log(i + 1 + ". " + list[i]);
+    }
+  }
+}
+
+viewList();
+addItem("Milk");
+addItem("Bread");
+viewList();
+removeItem("Bread");
+viewList();
+removeItem("Cheese");
+
+//Create a function named transformArray that:
+/*Takes an array of numbers as its only argument.
+Removes all numbers less than 10.
+Multiplies the remaining numbers by 2.*/
+function transformArray(array) {
+  let newArray = array.filter((arr) => arr >= 10);
+  console.log(newArray);
+  newArray = newArray.map((num) => num * 2);
+  console.log(newArray);
+}
+transformArray([10, 15, 20, 25]);
+
+//Create a function named formatSentence that:
+/*Takes one argument: sentence (a string).
+Splits the sentence into words using spaces (" ") as the delimiter.
+Joins the words back together into a single string, separated by hyphens ("-").
+Returns the formatted string.*/
+function formatSentence(sentence) {
+  sentence = sentence.split(" ");
+  sentence = sentence.join("-");
+  return sentence;
+}
+console.log(formatSentence("Coding is super fun"));
+
+//You are given the following array:
+/*Your task is to:
+Use slice to extract the numbers starting from 15 (inclusive) to 35 (inclusive).
+Print the resulting array.*/
+let following = [5, 10, 15, 20, 25, 30, 35, 40, 45];
+following = following.slice(2, 7);
+console.log(following);
