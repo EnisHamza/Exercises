@@ -540,3 +540,68 @@ Print the resulting array.*/
 let following = [5, 10, 15, 20, 25, 30, 35, 40, 45];
 following = following.slice(2, 7);
 console.log(following);
+
+//Write a function named doubleOdds that takes one input:
+/*numbers - an array of numbers.
+The function should:
+
+Double only the odd numbers in the array.
+Return the resulting array.*/
+function doubleOdds(numbers) {
+  return numbers.map((num) => (num % 2 == 1 ? num * 2 : num));
+}
+console.log(doubleOdds([1, 2, 3, 4, 5]));
+
+//Write a function named analyzeBudget that:
+/*Takes three arguments: a list of prices, a list of item names, and a budget per item.
+Prints:
+A list of items you can afford.
+The total cost of the affordable items.
+The number of items out of budget.
+Example:
+For prices = [10, 20, 5, 15], items = ["Notebook", "Pen", "Eraser", "Bag"], and budget = 10, the output should be:
+Affordable items: "Notebook", "Eraser"
+Total budget needed: 15
+Items out of budget: 2*/
+function analyzeBudget(price, items, budget) {
+  let affordableItems = [];
+  let budgetNeeded = 0;
+  let outBudget = 0;
+  for (let i = 0; i < price.length; i++) {
+    if (price[i] <= budget) {
+      affordableItems.push(`"${items[i]}"`);
+      budgetNeeded += price[i];
+    } else {
+      outBudget++;
+    }
+  }
+  console.log("Affordable items " + affordableItems.join(", "));
+  console.log(budgetNeeded);
+  console.log(outBudget);
+}
+const price = [10, 20, 5, 15];
+const items = ["Notebook", "Pen", "Eraser", "Bag"];
+const budget = 10;
+
+analyzeBudget(price, items, budget);
+
+//Each test case has one input - an odd whole number. (given)
+/*Your task is to print n - pyramid using *, here are some examples:
+
+1 - pyramid
+*
+5 - pyramid
+*
+***
+*****
+7 - pyramid
+*
+***
+*****
+********/
+let m = 5;
+let rows = Math.floor(m / 2) + 1;
+for (let i = 0; i < rows; i++) {
+  let stars = 2 * i + 1;
+  console.log("*".repeat(stars));
+}
