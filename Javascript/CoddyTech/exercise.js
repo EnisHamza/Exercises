@@ -605,3 +605,20 @@ for (let i = 0; i < rows; i++) {
   let stars = 2 * i + 1;
   console.log("*".repeat(stars));
 }
+
+let greeting = "Hello";
+greeting = greeting.toLowerCase();
+console.log(greeting);
+
+function countUniqueVowels(str) {
+  const vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"];
+  let count = [];
+  // Write code here
+  for (let char of str) {
+    if (vowels.includes(char) && !count.includes(char)) {
+      count.push(char);
+    }
+  }
+  return count.length;
+}
+console.log(countUniqueVowels("Hello World"));
