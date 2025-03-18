@@ -22,3 +22,13 @@ function alternateCase(str) {
   console.log(result);
 }
 alternateCase("kosova");
+
+function printSum(string1, string2) {
+  // Write your code below this line
+  let sum = 0;
+  const number1 = Number(string1);
+  const number2 = Number(string2);
+  sum = number1 + number2;
+  return sum;
+}
+console.log(printSum("52", "21"));
