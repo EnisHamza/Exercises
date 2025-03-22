@@ -82,3 +82,42 @@ function evenSum(number) {
   console.log(result);
 }
 evenSum(100);
+
+//You are given an array called numbers. Print the last 5 elements of the array using a for loop.
+function printer(numbers) {
+  for (let i = 2; i <= numbers.length - 1; i++) {
+    console.log(numbers[i]);
+  }
+}
+printer([1, 2, 3, 4, 5, 6, 7]);
+
+//You are given two arrays, nums1 and nums2. Your job is to get the last element of nums1 and insert it as the first element of nums2.
+//Remove the last element of nums1. Print nums1, then print nums2.
+function elSwap(nums1, nums2) {
+  // Write your code below this line
+  let lastItem = nums1.pop();
+  nums2.unshift(lastItem);
+  console.log(nums1);
+  console.log(nums2);
+}
+elSwap([2, 5, 6, 1], [6, 7, 2, 8, 2]);
+
+//You are given two arrays arr1 and arr2. Your job is to find the union of these two arrays.
+//For example, the union of [1, 2, 3] and [100, 2, 1, 10] is [1, 2, 3, 100, 10].
+//Basically, your job is to create a new third array and store every different number from both arrays.
+//Make sure not to have duplicates. Looping through arrays and using the .includes() method might help you.
+function union(arr1, arr2) {
+  let arr3 = [];
+  for (let i = 0; i < arr1.length; i++) {
+    if (!arr3.includes(arr1[i])) {
+      arr3.push(arr1[i]);
+    }
+  }
+  for (let i = 0; i < arr2.length; i++) {
+    if (!arr3.includes(arr2[i])) {
+      arr3.push(arr2[i]);
+    }
+  }
+  console.log(arr3);
+}
+union([2, 5, 3, 6], [1, 2, 3, 7]);
