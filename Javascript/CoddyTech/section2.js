@@ -121,3 +121,18 @@ function union(arr1, arr2) {
   console.log(arr3);
 }
 union([2, 5, 3, 6], [1, 2, 3, 7]);
+
+function greetWorld() {
+  console.log("Hello, World!");
+}
+
+function sumArray(arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
+  }
+  console.log(sum);
+}
+
+greetWorld();
+sumArray([1, 2, 3]);
