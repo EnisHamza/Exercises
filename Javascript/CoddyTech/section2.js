@@ -136,3 +136,66 @@ function sumArray(arr) {
 
 greetWorld();
 sumArray([1, 2, 3]);
+
+//Write the code for the function factorial that calculates the factorial of a number.
+//If you don't know what factorial is, factorial means the product of the number and all numbers below it.
+//For example, 5 factorial would be: 5 * 4 * 3 * 2 * 1 = 120. Use recursion.
+//Your function should return the value. No need to print it, return values are tested automatically.
+function factorial(number) {
+  if (number === 0 || number === 1) {
+    return 1;
+  }
+  return number * factorial(number - 1);
+}
+console.log(factorial(5));
+
+/*function pyramid(height) {
+  // Write your code below this line
+  for (let i = 0; i < height; i++) {
+    let str = ""; // Declare an empty string to hold spaces and hashes for this row
+
+    // Add spaces: Loop from i + 1 to height
+    for (let j = 0; j < height - i - 1; j++) {
+      str += " "; // Add space
+    }
+
+    // Add hashes: Loop from 0 to i (inclusive)
+    for (let k = 0; k <= i; k++) {
+      str += "#"; // Add hash
+    }
+
+    // Print the string (current row), then clear the string
+    console.log(str);
+  }
+}
+pyramid(4);*/
+
+//You are given a function called pyramids that takes in a parameter called height.
+//You need to complete the code inside the function to make it print pyramids as shown above.
+//A pyramid of height 3 would look like:
+/*
+  #  #
+ ##  ##
+###  ###
+*/
+function pyramids(height) {
+  // Write your code below this line
+  for (let i = 0; i < height; i++) {
+    let str = "";
+    for (let j = 0; j < height - i - 1; j++) {
+      str += " ";
+    }
+
+    for (let k = 0; k <= i; k++) {
+      str += "#";
+    }
+
+    str += "  ";
+
+    for (let k = 0; k <= i; k++) {
+      str += "#";
+    }
+    console.log(str);
+  }
+}
+pyramids(4);
