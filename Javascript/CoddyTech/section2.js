@@ -229,3 +229,61 @@ for (const row of rows) {
 }
 
 console.log(result);
+
+//You are given a function called validateCard.
+//It takes in one parameter, cardNumber, that contains the card number that should be validated.
+// First, check if the number is a valid credit card number using Luhn's Algorithm as shown above.
+// If it is not a valid credit card, print INVALID.
+// If the card is valid, check if it is a MasterCard or an American Express card. Check this using the number of digits.
+// American Express uses 15-digit numbers and MasterCard uses 16-digit numbers.
+// Don't forget to check the starting numbers as well.
+// If American Express is correct, print AMEX, and if MasterCard is correct, print MASTERCARD.
+// If it is any other length, the card number is invalid.
+function validateCard(cardNumber) {
+  // Convert the card number to a string
+  cardNumber = cardNumber.toString();
+
+  // Luhn's Algorithm Check
+  function luhnCheck(cardNumber) {
+    let totalSum = 0;
+    let reverseDigits = cardNumber.split("").reverse(); // Reverse the digits
+
+    // Iterate through the reversed digits
+    for (let i = 0; i < reverseDigits.length; i++) {
+      let num = parseInt(reverseDigits[i]);
+
+      if (i % 2 === 1) {
+        // Every second digit starting from the second-to-last
+        num *= 2;
+        if (num > 9) {
+          // If the product is greater than 9, subtract 9 (same as summing digits of the product)
+          num -= 9;
+        }
+      }
+
+      totalSum += num;
+    }
+
+    return totalSum % 10 === 0; // Valid if total sum modulo 10 is 0
+  }
+
+  // Check if the card number passes the Luhn's algorithm
+  if (!luhnCheck(cardNumber)) {
+    console.log("INVALID");
+    return;
+  }
+
+  // Check the card type based on length and prefix
+  let length = cardNumber.length;
+
+  if (
+    length === 15 &&
+    (cardNumber.startsWith("34") || cardNumber.startsWith("37"))
+  ) {
+    console.log("AMEX");
+  } else if (length === 16 && cardNumber.startsWith("5")) {
+    console.log("MASTERCARD");
+  } else {
+    console.log("INVALID");
+  }
+}
