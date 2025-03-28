@@ -287,3 +287,38 @@ function validateCard(cardNumber) {
     console.log("INVALID");
   }
 }
+
+//You are given a function called substitution that takes in two parameters.
+//Parameter key is an array of 26 letters that should be used as the key to the encryption.
+//Parameter number two, message is the original text that you have to encrypt.
+//Your job is to write code that will encrypt the text and store it in a string.
+//Return the string to complete the function.
+//Feel free to write other functions as well that you will use in the main function.
+function substitution(key, message) {
+  const alphabet = "abcdefghijklmnopqrstuvwxyz";
+  const alphabetUpper = alphabet.toUpperCase();
+
+  const letterMap = {};
+
+  // Map lowercase letters
+  for (let i = 0; i < 26; i++) {
+    letterMap[alphabet[i]] = key[i].toLowerCase();
+    letterMap[alphabetUpper[i]] = key[i].toUpperCase();
+  }
+
+  let encryptedMessage = "";
+
+  for (let i = 0; i < message.length; i++) {
+    const char = message[i];
+
+    // If the character is a letter, encrypt it using the letterMap
+    if (alphabet.includes(char.toLowerCase())) {
+      encryptedMessage += letterMap[char];
+    } else {
+      // If it's not a letter (special character), leave it unchanged
+      encryptedMessage += char;
+    }
+  }
+
+  return encryptedMessage;
+}
