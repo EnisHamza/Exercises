@@ -1,0 +1,40 @@
+/* Container grid layout */
+#container {
+  display: grid;
+  grid-template-columns: 60px repeat(10, 1fr);  /* Slightly wider label column, flexible columns */
+  grid-template-rows: 40px repeat(10, 40px);    /* More spacious rows */
+  border: 1px solid #ccc;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  width: fit-content;
+  margin: 40px auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Label styling */
+.label {
+  background-color: #f0f0f0;
+  text-align: center;
+  line-height: 40px;
+  font-weight: bold;
+  border: 1px solid #dcdcdc;
+  color: #333;
+}
+
+/* Cell styling (add if you want to style data cells too) */
+.cell {
+  border: 1px solid #e0e0e0;
+  padding: 0;
+  text-align: right;
+  padding-right: 10px;
+  line-height: 40px;
+}
+
+/* Optional hover effect for interactivity */
+.cell:hover {
+  background-color: #fafafa;
+}
+
+/* Responsive tweak: make columns scrollable on small screens */
+#container {
+  overflow-x: auto;
+}
